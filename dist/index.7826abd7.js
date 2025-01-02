@@ -36395,15 +36395,46 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Contactus = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Name : naveen.K"
+                className: "font-serif text-3xl p-4 m-4",
+                children: "Contact us"
             }, void 0, false, {
                 fileName: "src/Contactus.js",
                 lineNumber: 4,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "name",
+                        className: "font-serif text-2xl p-2 m-2 border border-black rounded-lg"
+                    }, void 0, false, {
+                        fileName: "src/Contactus.js",
+                        lineNumber: 6,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "Message",
+                        className: "font-serif text-2xl p-2 m-2 border border-black rounded-lg"
+                    }, void 0, false, {
+                        fileName: "src/Contactus.js",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "font-serif text-2xl p-2 m-2 border border-black rounded-lg bg-black text-white",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/Contactus.js",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/Contactus.js",
                 lineNumber: 5,
                 columnNumber: 13
@@ -40921,75 +40952,96 @@ const Cart = ()=>{
     const handleClearCart = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
+    const handleRemoveCart = ()=>{
+        dispatch((0, _cartSlice.removeItem)());
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container mx-auto mt-8 p-4",
+        className: "container mx-auto mt-10 p-6",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-3xl font-bold text-center mb-6",
+                className: "text-4xl font-extrabold text-center text-gray-800 mb-8",
                 children: "Your Shopping Cart"
             }, void 0, false, {
                 fileName: "src/Cart.js",
-                lineNumber: 15,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-white shadow-lg rounded-lg p-6 max-w-4xl mx-auto",
+                className: "bg-gray-50 shadow-lg rounded-lg p-8 max-w-5xl mx-auto",
                 children: cartItems.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    className: "text-xl text-gray-600 font-semibold text-center py-4",
-                    children: "Your cart is empty. Please add some items!"
+                    className: "text-xl text-gray-500 font-medium text-center py-6",
+                    children: "Your cart is empty. Add some items to start shopping!"
                 }, void 0, false, {
                     fileName: "src/Cart.js",
-                    lineNumber: 19,
+                    lineNumber: 22,
                     columnNumber: 11
                 }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex justify-between items-center mb-4",
+                            className: "flex flex-col sm:flex-row justify-between items-center mb-6",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "text-2xl font-semibold",
+                                    className: "text-2xl font-bold text-gray-700",
                                     children: [
                                         "Items in Cart: ",
                                         cartItems.length
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/Cart.js",
-                                    lineNumber: 25,
+                                    lineNumber: 28,
                                     columnNumber: 15
                                 }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "px-4 py-2 bg-red-500 text-white font-semibold rounded hover:bg-red-600 transition",
-                                    onClick: handleClearCart,
-                                    children: "Clear Cart"
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex gap-4 mt-4 sm:mt-0",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "px-6 py-2 bg-yellow-500 text-white font-medium rounded-md shadow hover:bg-yellow-600 transition",
+                                            onClick: handleRemoveCart,
+                                            children: "Remove Items"
+                                        }, void 0, false, {
+                                            fileName: "src/Cart.js",
+                                            lineNumber: 30,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "px-6 py-2 bg-red-500 text-white font-medium rounded-md shadow hover:bg-red-600 transition",
+                                            onClick: handleClearCart,
+                                            children: "Clear Cart"
+                                        }, void 0, false, {
+                                            fileName: "src/Cart.js",
+                                            lineNumber: 36,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "src/Cart.js",
-                                    lineNumber: 26,
+                                    lineNumber: 29,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/Cart.js",
-                            lineNumber: 24,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
                             items: cartItems
                         }, void 0, false, {
                             fileName: "src/Cart.js",
-                            lineNumber: 34,
+                            lineNumber: 45,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true)
             }, void 0, false, {
                 fileName: "src/Cart.js",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Cart.js",
-        lineNumber: 14,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
